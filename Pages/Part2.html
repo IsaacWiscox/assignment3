@@ -1,0 +1,65 @@
+<!-- 
+Isaac Wisniewski
+Assignment 3
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cool box</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.125rem;
+            background-color: #3498db;
+            color: #ffffff;
+            text-shadow: 1px 1px 1px #000000;
+            border-radius: 8px;
+            border: 1px solid #2c3e50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, transparent, #000000 30%, #000000);
+        }
+    
+        .box:before,
+        .box:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    
+        .box:before {
+            top: 6px;
+            left: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: inset 3px 3px 6px rgba(255, 255, 255, 0.3);
+        }
+    
+        .box:after {
+            bottom: 6px;
+            right: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+    
+        .box:hover {
+            cursor: pointer;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+  </head>
+  <body>
+      <div class="box">This is a cool box</div>
+  </body>
+</html>
+    
